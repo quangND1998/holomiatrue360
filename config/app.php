@@ -195,7 +195,6 @@ return [
 
 
         //filemanager
-        // UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
         //zip
@@ -255,7 +254,6 @@ return [
         'Image'        => Intervention\Image\Facades\Image::class,
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
-        // 'aclRepository' => \Alexusmai\LaravelFileManager\Services\ACLService\ConfigACLRepository::class,
     ],
 
 ];
