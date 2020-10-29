@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "alexusmai/laravel-file-manager": "^2.5",
         "doctrine/dbal": "^2.5",
         "filp/whoops": "~2.0",
         "harvesthq/chosen": "^1.8",
