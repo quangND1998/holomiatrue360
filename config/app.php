@@ -195,7 +195,7 @@ return [
 
 
         //filemanager
-        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+        // UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
         //zip
