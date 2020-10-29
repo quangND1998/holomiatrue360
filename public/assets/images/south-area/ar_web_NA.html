@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .model3d {
+            display: block;
+            position: relative;
+            width: 100% !important;
+            height: 100vh !important;
+            overflow: hidden;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sample">
+        <div id="demo-container-1" class="demo">
+            <model-viewer src="assets/images/north-area/ARmodel/PK6.glb" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" auto-rotate camera-controls alt="Sa bàn BĐS ảo" skybox-image="assets/images/hdr/Khonggiangsaban.hdr" ios-src="assets/images/north-area/ARmodel/PK6.usdz"
+                data-js-focus-visible="" ar-status="not-presenting" class="model3d"></model-viewer>
+        </div>
+    </div>
+
+    <script src="assets/js/AR/webcomponents-loader.js"></script>
+    <script src="assets/js/AR/intersection-observer.js"></script>
+    <script src="assets/js/AR/ResizeObserver.js"></script>
+    <script src="assets/js/AR/focus-visible.js"></script>
+
+    <!-- Documentation-specific dependencies: -->
+    <script type="module" src="assets/js/AR/dependencies.js"></script>
+    <script nomodule src="assets/js/AR/dependencies-legacy.js"></script>
+
+    <!-- Loads <model-viewer> only on modern browsers: -->
+    <script type="module" src="assets/js/AR/model-viewer.min.js"></script>
+    <script nomodule src="assets/js/AR/model-viewer-legacy.js"></script>
+</body>
+
+</html>
