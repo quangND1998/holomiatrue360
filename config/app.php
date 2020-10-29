@@ -199,7 +199,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
 
         //zip
-        ZanySoft\Zip\ZipServiceProvider::class,
+        //ZanySoft\Zip\ZipServiceProvider::class,
     ],
 
     /*
