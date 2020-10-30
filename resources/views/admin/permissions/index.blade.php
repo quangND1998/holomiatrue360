@@ -89,7 +89,7 @@
                             <thead>
                                 <tr>
                                     <th>@lang('global.permissions.fields.name')</th>
-                                    <th>HÀNH ĐỘNG</th>
+                                    <th>@lang('global.action')</th>
                                 </tr>
                             </thead>
                             <tbody>

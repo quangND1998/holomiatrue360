@@ -153,7 +153,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if ($projectShowflat->showflat  != null)
+                        @if ($projectShowflat->showflat  !=null)
                            @foreach ($projectShowflat->showflat as $item)
                                 <tr data-entry-id="{{ $item->id }}">
                                     <td>{{$item->id  }}</td>

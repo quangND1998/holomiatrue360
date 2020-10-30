@@ -93,7 +93,7 @@ Route::group(['middleware' => ['lang']], function() {
             //Edit
             Route::get('/{id}/subdivision/edit_model_ar','Subdivision\SubdivisionController@update_model_ar')->name('subdivision.update_model_ar');
 
-            Route::get('/{id}/subdivision/createground','Subdivision\SubdivisionController@createground')->name('subdivision.creatground');
+            Route::get('/{id}/subdivision/ground','Subdivision\SubdivisionController@createground')->name('subdivision.creatground');
 
             //Subdivision/Ground
             Route::resource('ground', 'Ground\GroundController');

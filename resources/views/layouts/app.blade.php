@@ -34,6 +34,7 @@
      <!-- Style CSS Files -->
       <link rel="stylesheet" href="asset/css/style.css">
       <link rel="stylesheet" href="asset/css/chosen.css">
+      <link rel="stylesheet" href="asset/css/dropzone.css">
 </head>
 
 <body>
@@ -124,6 +125,7 @@
     <!-- Sweet Alert -->
     <script src="asset/js/plugin/sweetalert/sweetalert.min.js"></script>
 
+    {{-- Fontawesome --}}
     <script src="https://kit.fontawesome.com/2c1eea7cec.js" crossorigin="anonymous"></script>
 
     <!-- Azzara JS -->

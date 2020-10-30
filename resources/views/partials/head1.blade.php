@@ -34,6 +34,8 @@
 <link rel="stylesheet" href="asset/css/bootstrap.min.css">
 <link rel="stylesheet" href="asset/css/azzara.min.css">
 <link rel="stylesheet" href="asset/css/bootstrap-multiselect.css">
+<link rel="stylesheet" href="asset/css/dropzone.css">
+
 
 <!-- CSS Just for demo purpose, don't include it in your project -->
 {{-- <link rel="stylesheet" href="asset/css/demo.css"> --}}

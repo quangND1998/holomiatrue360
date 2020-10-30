@@ -16,19 +16,6 @@
                         <a  href="{{ route('admin.dashboard') }}">Dự án</a>
                     </li>
                 </ul>
-                <div class="btn-group btn-group-page-header ml-auto">
-                    <button type="button" class="btn btn-light btn-round btn-page-header-dropdown dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-ellipsis-h"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <div class="arrow"></div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </div>
             </div>
 
                     <div class="row">
@@ -88,7 +75,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Name</th>
+                                                    <th>Tên dự án</th>
                                                     <th>Logo</th>
                                                     <th>Trạng thái</th>
                                                     <th>Preview</th>
@@ -119,7 +106,7 @@
                                                         <td>@if( $project->info->published ==0 ||  $project->general->folder_present_image == null )
                                                             <p></p>
                                                         @else
-                                                            <a href="project/{{$project->title}}" target="_blank">Link <img src="admin/icon/preview.png"></a>
+                                                            <a href="project/{{ $project->title }}" target="_blank">Link <img src="admin/icon/preview.png"></a>
                                                         @endif
                                                     </td>
                                                         <td>{{$project->user->name}}</td>

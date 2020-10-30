@@ -8,14 +8,14 @@
         <div class="row">
             <div class="form-group col-md-6 col-sm-12 col-12 order-sm-1 order-md-1 order-1">
                 <label for="">Logo</label>
-                <div class="text-center">
-                    <img class="border" src="{{ $project->info->logo }}" width="50%" height="auto" alt="">
+                <div class="text-center border w-50 mx-sm-auto mx-auto mx-md-0">
+                    <img class="" src="{{ $project->info->logo }}" width="100%" height="auto" alt="">
                 </div>
             </div>
              <div class="form-group col-md-6 col-sm-12 col-12 order-sm-2 order-md-2 order-2">
                 <label for="">Thumbnail</label>
-                <div class="text-center">
-                    <img class="border" src="{{ $project->info->thumbnail }}" width="50%" height="auto" alt="">
+                <div class="text-center border w-50 mx-sm-auto mx-auto mx-md-0">
+                    <img class="" src="{{ $project->info->thumbnail }}" width="100%" height="auto" alt="">
                 </div>
             </div>
              <div class="form-group col-md-6 col-sm-12 col-12 order-sm-3 order-md-3 order-3">
@@ -43,7 +43,7 @@
                 @endif
             </div>
             <div class="form-group col-md-6 col-sm-12 col-12 order-sm-7 order-md-8 order-7">
-                <label for="">Link phim website dự án</label>
+                <label for="">Website dự án</label>
                 <input type="text" name="link_youtube" value="{{ $project->info->link_website }}" class="form-control font-weight-bold" id="" readonly>
             </div>
             <div class="col-12 text-center mt-4 pb-3 order-sm-9 order-md-9 order-9">

@@ -58,24 +58,24 @@
                 <li class="nav-item {{ $request->segment(2) == 'permissions' ? 'active ' : '' }} {{ $request->segment(2) == 'roles' ? 'active ' : '' }} {{ $request->segment(2) == 'users' ? 'active ' : '' }}">
                     <a data-toggle="collapse" href="#user">
                         <i class="fas fa-user"></i>
-                        <p>Quản lý tài khoản</p>
+                        <p>@lang('global.user-management.title')</p>
                         <span class="caret"></span>
                     </a>
                     <div class="collapse" id="user">
                         <ul class="nav nav-collapse">
                             <li class="{{ $request->segment(2) == 'permissions' ? 'active active-sub' : '' }}">
                                 <a  href="{{ route('admin.permissions.index') }}">
-                                    <span class="sub-item">Danh sách quyền</span>
+                                    <span class="sub-item">  @lang('global.permissions.title')</span>
                                 </a>
                             </li>
                               <li  class="{{ $request->segment(2) == 'roles' ? 'active active-sub' : '' }}">
                                 <a href="{{ route('admin.roles.index') }}">
-                                    <span class="sub-item">Phân quyền</span>
+                                    <span class="sub-item">  @lang('global.roles.title')</span>
                                 </a>
                             </li>
                             <li  class="{{ $request->segment(2) == 'users' ? 'active active-sub' : '' }}">
                                 <a href="{{ route('admin.users.index') }}">
-                                    <span class="sub-item">Danh sách nhân viên</span>
+                                    <span class="sub-item">  @lang('global.users.title')</span>
                                 </a>
                             </li>
                         </ul>

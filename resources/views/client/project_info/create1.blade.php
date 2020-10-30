@@ -6,19 +6,13 @@
 <div class="row">
     <div class="col-md-12"> 
 
- <form role="form" id="category" method="POST" action="{{ route('admin.info.store') }}" enctype="multipart/form-data">
+  <form role="form" id="category" method="POST" action="{{ route('admin.info.store') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
     <input type="hidden" name="project_id" value="{{$project->id}}">
 
         <div class="card">
-            <div class="card-header d-flex justify-content-between">
+            <div class="card-header d-flex justify-content-between pl-0">
                 <h4 class="card-title">Thông tin dự án {{ $project->title }}</h4>
-                {{-- <button type="submit" class="btn btn-success">
-                    <span class="btn-label">
-                        <i class="fas fa-save"></i>
-                    </span>
-                     Lưu lại
-                </button> --}}
             </div>
 
             <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
@@ -114,7 +108,9 @@
                 </button>
             </div>
         </div>
-    </form>
+    </form> 
+
+
     </div>
 </div>
 

@@ -30,10 +30,12 @@
     
         
             @if($paginator->nextPageUrl() !=null)
-            <a class="page-link" href="{{ $paginator->nextPageUrl() }}" aria-label="Next">
+           <li class="page-item">
+                <a class="page-link" href="{{ $paginator->nextPageUrl() }}" aria-label="Next">
                 <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
                 <span class="sr-only">Next</span>
             </a>
+           </li>
             @endif
         </li>
     </ul>

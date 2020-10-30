@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group col-md-4 {{ $errors->has('folder_img_night') ? 'has-error' : '' }}">
-                                <label for="folder_img_night">Ảnh san bàn đêm</label>
+                                <label for="folder_img_night">Ảnh sa bàn đêm</label>
                                 <input type="file" class="form-control-file" id="folder_img_night" name="folder_img_night" required oninvalid="setCustomValidity('Vui lòng nhập vào ảnh sa bàn đêm')" accept=".zip">
                                 <small id="" class="form-text text-muted">Là file .zip chứa 60 ảnh sa bàn đêm.</small>
                                 @if ($errors->has('folder_img_night'))

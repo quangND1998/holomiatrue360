@@ -48,9 +48,8 @@
 <script src="asset/js/demo.js"></script>
 
 
-<!-- Multiselect JS -->
-
 <script src="asset/js/bootstrap-multiselect.js"></script>
+<script src="asset/js/plugin/dropzone/dropzone.min.js"></script>
 
 <script src="asset/js/ready.js"></script>
 {{-- <script src="asset/js/bootstrap-multiselect.js"></script> --}}

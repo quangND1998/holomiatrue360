@@ -64,7 +64,7 @@
             <div class="card">
                 <div class="card-header">
                      <div class="d-flex align-items-center">
-                        <h4 class="page-title mb-0">Chỉnh sửa tên quyền</h4>
+                        <h4 class="page-title mb-0">@lang('global.edit_permission')</h4>
                        
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                         <div class="form-group">
-                            <label for="name">Tên quyền</label>
+                            <label for="name">@lang('global.permissions.fields.name')</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Tên quyền" value={{$permission->name}}>
                         </div>
                         <div class="mx-auto mt-4 text-center">
@@ -82,7 +82,7 @@
                                 <span class="btn-label">
                                     <i class="fas fa-save"></i>
                                 </span>
-                                Lưu lại
+                               @lang('global.app_save')
                             </button>
                         </div>
                    </form>

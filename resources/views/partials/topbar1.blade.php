@@ -40,6 +40,13 @@
                         <i class="fa fa-search"></i>
                     </a>
                 </li>
+
+                <div class="top-right">
+                    <li class=" navbar-nav nav-item flat">
+                        <a href="{{url(Request::getPathInfo().'?lang=en')}}"><img src="admin/images/flat/en.png"></a>
+                        <a href="{{url(Request::getPathInfo().'?lang=vn')}}"><img src="admin/images/flat/vn.png"></a>
+                    </li>
+                </div>
                 <li class="nav-item dropdown hidden-caret">
                     <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-envelope"></i>

@@ -9,78 +9,51 @@ return [
 		],
 	],
 	
-	// 'permissions' => [
-	// 	'title' => 'Danh sách quyền',
-	// 	'created_at' => 'Time',
-	// 	'fields' => [
-	// 		'name' => 'Name',
-	// 	],
-	// ],
-
-		
-	// 'roles' => [
-	// 	'title' => 'Phân quyền',
-	// 	'created_at' => 'Time',
-	// 	'fields' => [
-	// 		'name' => 'Name',
-	// 		'permission' => 'Permissions',
-	// 	],
-	// ],
-	
-	// 'users' => [
-	// 	'title' => 'Nhân viên',
-	// 	'created_at' => 'Time',
-	// 	'fields' => [
-	// 		'name' => 'Name',
-	// 		'email' => 'Email',
-	// 		'password' => 'Password',
-	// 		'roles' => 'Roles',
-	// 		'remember-token' => 'Remember token',
-	// 	],
-	// ],
-
 	'permissions' => [
-		'title' => 'Danh sách quyền',
+		'title' => 'Permissions',
 		'created_at' => 'Time',
 		'fields' => [
-			'name' => 'TÊN QUYỀN',
+			'name' => 'Name',
 		],
-	],
-
+    ],
+    'action' =>'Action',
+	
 	'roles' => [
-		'title' => 'Phân quyền',
+		'title' => 'Roles',
 		'created_at' => 'Time',
 		'fields' => [
-			'name' => 'TÊN PHÂN QUYỀN',
+			'name' => 'Name',
 			'permission' => 'Permissions',
 		],
 	],
 	
 	'users' => [
-		'title' => 'Danh sách nhân viên',
+		'title' => 'Users',
 		'created_at' => 'Time',
 		'fields' => [
-			'name' => 'TÊN NHÂN VIÊN',
-			'email' => 'EMAIL',
+			'name' => 'Name',
+			'email' => 'Email',
 			'password' => 'Password',
 			'roles' => 'Roles',
 			'remember-token' => 'Remember token',
 		],
-	],
-	
-	'app_create' => 'Thêm',
-	'app_save' => 'Lưu lại',
-	'app_edit' => 'Sửa',
-	'app_view' => 'Xem',
-	'app_update' => 'Cập nhật',
+    ],
+    'edit_permission'=>"Permission Edit",
+
+	'app_create' => 'Create',
+    'app_save' => 'Save',
+    'app_cancel'=>'Cancel',
+	'app_edit' => 'Edit',
+	'app_view' => 'View',
+	'app_update' => 'Update',
 	'app_list' => 'List',
-	'app_no_entries_in_table' => 'Không có mục nào trong bảng.',
+	'app_no_entries_in_table' => 'No entries in table',
 	'custom_controller_index' => 'Custom controller index.',
 	'app_logout' => 'Logout',
-	'app_add_new' => 'Thêm mới',
+	'app_add_new' => 'Add new',
 	'app_are_you_sure' => 'Are you sure?',
 	'app_back_to_list' => 'Back to list',
 	'app_dashboard' => 'Dashboard',
-	'app_delete' => 'Xóa',
+	'app_delete' => 'Delete',
 	'global_title' => 'Admin Manager',
 ];

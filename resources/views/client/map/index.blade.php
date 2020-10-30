@@ -59,7 +59,7 @@
                             <th>#</th>
                             <th>Tên bản đồ</th>
                             <th>Hình ảnh</th>
-                            <th>Kinh độ | Vĩ Độ </th>
+                            <th>Kinh độ | Vĩ độ </th>
                             <th>Hành động</th>
                         </tr>
                     </thead>
@@ -69,7 +69,7 @@
                                     <td>{{$project_map->map->title }}</td>
                                     <td><img src="{{$project_map->map->folder_image }}" alt="" width="80px" height="50px"></td>
                                     @if($project_map->address !=null)
-                                    <td>{{ $project_map->address->latitude }} | {{ $project_map->address->longtitude }}</td>
+                                    <td>{{ $project_map->address->longtitude }} | {{ $project_map->address->latitude }}</td>
                                     @else
                                         <td>Chưa có dữ liệu</td>
                                     @endif
