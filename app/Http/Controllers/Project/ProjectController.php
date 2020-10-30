@@ -87,7 +87,7 @@ class ProjectController extends Controller
                     // return view('info.create',with($project->id)));
             // return view('info.create',['project'=>$project,'projectid'=>$project->id]);
             // return view('info.create',['project'=>$project]);  
-            return redirect()->route('admin.info.showProject', ['project' => $project]);
+            return redirect()->route('admin.info.showProject', ['id' => $project->id]);
         }
         return view('errors.404');
     }
