@@ -5,99 +5,9 @@
 
 @section('content-info')
 
-{{-- <h3 class="page-title">Căn hộ Tham Khảo</h3>
-        <button  class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create Project</button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <form  class="form-group"  method="POST" action="{{ route('admin.showflat.storeShowFlat',[$projectShowflat->id]) }}" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    {{ method_field('PUT') }}
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Thêm Căn Hộ Tham Khảo</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label for="recipient-name" class="col-form-label">Tên Căn Hộ:</label>
-                            <input type="text" class="form-control" id="title" name ="title">
-                                @if ($errors->has('title'))
-                                    <span class="text-red" >
-                                        <strong>{{ $errors->first('title') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <div class="form-group {{ $errors->has('folder_flat') ? 'has-error' : '' }}">
-                            <label for="recipient-name" class="col-form-label">Ảnh Căn Hộ</label>
-                            <input type="file" class="form-control" id="folder_flat" name ="folder_flat">
-                                @if ($errors->has('folder_flat'))
-                                    <span class="text-red" >
-                                        <strong>{{ $errors->first('folder_flat') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                        </div>
-                        <div class="form-group">
-                            <div class="modal-footer">
-
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Tạo Mới</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
 
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                @lang('global.app_list')
-            </div>
-            <div class="panel-body table-responsive">
-                <table class="table table-bordered table-striped {{ $projectShowflat->showflat  !=null ? 'datatable' : '' }} dt-select">
-                    <thead>
-                        <tr>
-                            <th>STT </th>
-                            <th>Tên Mặt Bằng</th>
-                            <th>Image</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if ($projectShowflat->showflat  !=null)
-                           @foreach ($projectShowflat->showflat as $item)
-                                    <td>{{ $count++ }}</td>
-                                    <td>{{ $item->title }}</td>
-
-                                    <td><a href={{ $item->folder_flat}} target="_blank">Link Preview</a></td>
-                                    <td>
-                                        <a href="{{ route('admin.showflat.edit',[Str::slug($projectShowflat->title),$item->id,]) }}" class="btn btn-xs btn-info">@lang('global.app_edit')</a>
-                                        {!! Form::open(array(
-                                            'style' => 'display: inline-block;',
-                                            'method' => 'DELETE',
-                                            'onsubmit' => "return confirm('".trans("global.app_are_you_sure")."');",
-                                            'route' => ['admin.showflat.destroy', $item->id])) !!}
-                                        {!! Form::submit(trans('global.app_delete'), array('class' => 'btn btn-xs btn-danger')) !!}
-                                        {!! Form::close() !!}
-                                    </td>
-                                </tr>
-                            @endforeach
-                        @else
-                            <tr>
-                                <td colspan="9">@lang('global.app_no_entries_in_table')</td>
-                            </tr>
-                        @endif
-                    </tbody>
-                </table>
-            </div>
-        </div> --}}
-
-        <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModal">Thêm căn hộ</button>
+<button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModal">Thêm căn hộ</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -153,7 +63,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if ($projectShowflat->showflat  !=null)
+                        @if ($projectShowflat->showflat  !=[])
                            @foreach ($projectShowflat->showflat as $item)
                                 <tr data-entry-id="{{ $item->id }}">
                                     <td>{{$item->id  }}</td>
