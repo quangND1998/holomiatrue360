@@ -77,12 +77,16 @@ class ProjectController extends Controller
             $project->title = $request->title;
             $project->user_id = Auth::user()->id;
             $project->save();
-            $general = new GeneralView();
-            $general->project_id = $project->id;
-            $general->save();
-            $model_ar = new ModelAR();
-            $model_ar->view_id = $general->id;
-            $model_ar->save();
+            if($project !=null){
+                $general = new GeneralView();
+                $general->project_id = $project->id;
+                $general->save();
+            }
+            if($general !=null){
+                $model_ar = new ModelAR();
+                $model_ar->view_id = $general->id;
+                $model_ar->save();
+            }
 
                     // return view('info.create',with($project->id)));
             // return view('info.create',['project'=>$project,'projectid'=>$project->id]);
