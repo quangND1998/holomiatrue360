@@ -1,0 +1,46 @@
+        .container {
+            margin: 60px auto;
+            width: 70%;
+            height: 70vh;
+        }
+        
+        body {
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+        
+        .zoom {
+            cursor: zoom-in;
+            margin-left: 10px;
+        }
+        
+        .overlay-button-zoom {
+            position: absolute;
+            bottom: 10%;
+            right: 30px;
+        }
+        
+        .zoom-out img {
+            width: 60px;
+        }
+        
+        .zoom-in img {
+            width: 60px;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        @media all and (max-width: 375px) {
+            .zoom {
+                margin-top: 30%;
+            }
+        }
+        
+        @media all and (max-width: 763px) {
+            .zoom {
+                margin-top: 30%;
+            }
+        }

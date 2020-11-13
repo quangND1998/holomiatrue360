@@ -1,0 +1,276 @@
+<krpano>
+
+ <include url="minimap.xml"/>
+
+
+  <display depthmaprendermode="3dmodel" />
+  <!-- <display depthmaprendermode="depthmap" /> -->
+  <!-- depthmaprendermode:
+	 - "depthmap" (default)
+		 - generates an internal 24bit depthmap image
+		 - fastest to load
+		 - no "holes", everything is "connected/filled"
+		 - not perfectly accurate
+	 - "3dmodel"
+		 - uses the 3d model and maps the pano onto it
+		 - slower because the 3d model internally needs to get sub-divided into many small triangles
+-->
+  <!-- SYSTEM FOR HAVING ALL HOTSPOTS FROM EVERY PANORAMA -->
+  <style name="everpano3d_0" panoname="00" prealign="0|0|0" ox="0.000" oy="0" oz="0.000" linkedscene="scene0" />
+  <style name="everpano3d_1" panoname="01" prealign="0|-5.915|0" ox="5.184" oy="0" oz="98.317" linkedscene="scene1" />
+  <style name="everpano3d_2" panoname="02" prealign="0|-5.294|0" ox="-37.170" oy="0" oz="196.881" linkedscene="scene2" />
+  <style name="everpano3d_3" panoname="03" prealign="0|-5.151|0" ox="-45.740" oy="0" oz="297.264" linkedscene="scene3" />
+  <style name="everpano3d_4" panoname="04" prealign="0|-5.232|0" ox="-124.859" oy="0" oz="330.737" linkedscene="scene4" />
+  <style name="everpano3d_5" panoname="05" prealign="0|-5.374|0" ox="-133.080" oy="0" oz="414.921" linkedscene="scene5" />
+  <style name="everpano3d_6" panoname="06" prealign="0|-6.088|0" ox="144.669" oy="0" oz="140.565" linkedscene="scene6" />
+  <style name="everpano3d_7" panoname="07" prealign="0|-7.382|0" ox="125.336" oy="0" oz="282.247" linkedscene="scene7" />
+  <style name="everpano3d_8" panoname="08" prealign="0|-7.165|0" ox="114.604" oy="0" oz="366.542" linkedscene="scene8" />
+  <style name="everpano3d_9" panoname="09" prealign="0|-4.570|0" ox="-95.947" oy="0" oz="91.348" linkedscene="scene9" />
+  <style name="everpano3d_10" panoname="10" prealign="0|0.731|0" ox="-76.660" oy="0" oz="-51.266" linkedscene="scene10" />
+  <style name="everpano3d_11" panoname="11" prealign="0|0.630|0" ox="-181.212" oy="0" oz="-50.042" linkedscene="scene11" />
+  <style name="everpano3d_12" panoname="12" prealign="0|1.661|0" ox="-3.213" oy="0" oz="-103.846" linkedscene="scene12" />
+  <style name="everpano3d_13" panoname="13" prealign="0|0.326|0" ox="-0.139" oy="0" oz="-204.443" linkedscene="scene13" />
+  <style name="everpano3d_14" panoname="14" prealign="0|0.618|0" ox="-48.686" oy="0" oz="-288.368" linkedscene="scene14" />
+  <style name="everpano3d_15" panoname="15" prealign="0|1.856|0" ox="-54.594" oy="0" oz="-375.883" linkedscene="scene15" />
+  <!-- SCENES -->
+  <!-- 00 -->
+  <scene name="scene0" onstart="activatespot2(pin0,180);" title="00" alt="100" thumburl="panos\0.tiles\snapshot.jpg" autoload="true" >
+    <view hlookat="-132.84" vlookat="0.58" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_0" >
+      <sphere url="panos\0.tiles\pano.jpg" /><depthmap url="panos\00.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 01 -->
+  <scene name="scene1" onstart="activatespot2(pin1,180);" title="01" alt="100" thumburl="panos\1.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_1" >
+      <sphere url="panos\1.tiles\pano.jpg" /><depthmap url="panos\01.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 02 -->
+  <scene name="scene2" onstart="activatespot2(pin3,180);" title="02" alt="100" thumburl="panos\2.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_2" >
+      <sphere url="panos\2.tiles\pano.jpg" /><depthmap url="panos\02.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 03 -->
+  <scene name="scene3" onstart="activatespot2(pin4,180);" title="03" alt="100" thumburl="panos\3.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_3" >
+      <sphere url="panos\3.tiles\pano.jpg" /><depthmap url="panos\03.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 04 -->
+  <scene name="scene4" onstart="activatespot2(pin5,180);" title="04" alt="100" thumburl="panos\4.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_4" >
+      <sphere url="panos\4.tiles\pano.jpg" /><depthmap url="panos\04.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 05 -->
+  <scene name="scene5" onstart="activatespot2(pin6,180);" title="05" alt="100" thumburl="panos\5.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_5" >
+      <sphere url="panos\5.tiles\pano.jpg" /><depthmap url="panos\05.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 06 -->
+  <scene name="scene6" onstart="activatespot2(pin7,180);" title="06" alt="100" thumburl="panos\6.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_6" >
+      <sphere url="panos\6.tiles\pano.jpg" /><depthmap url="panos\06.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 07 -->
+  <scene name="scene7" onstart="activatespot2(pin8,180);" title="07" alt="100" thumburl="panos\7.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_7" >
+      <sphere url="panos\7.tiles\pano.jpg" /><depthmap url="panos\07.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 08 -->
+  <scene name="scene8" onstart="activatespot2(pin9,180);" title="08" alt="100" thumburl="panos\8.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_8" >
+      <sphere url="panos\8.tiles\pano.jpg" /><depthmap url="panos\08.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 09 -->
+  <scene name="scene9" onstart="activatespot2(pin2,180);" title="09" alt="100" thumburl="panos\9.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_9" >
+      <sphere url="panos\9.tiles\pano.jpg" /><depthmap url="panos\09.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 10 -->
+  <scene name="scene10" onstart="activatespot2(pin10,180);" title="10" alt="100" thumburl="panos\10.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_10" >
+      <sphere url="panos\10.tiles\pano.jpg" /><depthmap url="panos\10.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 11 -->
+  <scene name="scene11" onstart="activatespot2(pin11,180);" title="11" alt="100" thumburl="panos\11.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_11" >
+      <sphere url="panos\11.tiles\pano.jpg" /><depthmap url="panos\11.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 12 -->
+  <scene name="scene12" onstart="activatespot2(pin12,180);" title="12" alt="100" thumburl="panos\12.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_12" >
+      <sphere url="panos\12.tiles\pano.jpg" /><depthmap url="panos\12.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 13 -->
+  <scene name="scene13" onstart="activatespot2(pin13,180);" title="13" alt="100" thumburl="panos\13.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_13" >
+      <sphere url="panos\13.tiles\pano.jpg" /><depthmap url="panos\13.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 14 -->
+  <scene name="scene14" onstart="activatespot2(pin14,180);" title="14" alt="100" thumburl="panos\14.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="125.12"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_14" >
+      <sphere url="panos\14.tiles\pano.jpg" /><depthmap url="panos\14.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+  <!-- 15 -->
+  <scene name="scene15" onstart="activatespot2(pin15,180);" title="15" alt="100" thumburl="panos\15.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120.00"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <image style="everpano3D_15" >
+      <sphere url="panos\15.tiles\pano.jpg" /><depthmap url="panos\15.jpg"
+          enabled="true"
+          rendermode="depthmap"
+          background="none"
+          scale="0.8"
+          offset="0.6"
+          subdiv=""
+          />
+
+    </image>
+  </scene>
+</krpano>

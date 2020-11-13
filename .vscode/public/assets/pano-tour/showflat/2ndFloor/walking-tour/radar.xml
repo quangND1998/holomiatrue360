@@ -1,0 +1,554 @@
+<krpano>
+    <!--  First Floor Plan  -->
+    <!--  Second Floor Plan  -->
+    <include url="language.xml" />
+    <sidemenu_settings maps="false"
+                       maps_type="google"
+                       tabmenu_width="25"
+                       setting_width="10"
+                       setting_height="40"
+                       setting_width_close="-280"
+                       info_width="25"
+                       info_height="40"
+                       info_width_close="-180"
+                       
+                       fly_width="50"
+                       fly_height="0"
+                       fly_width_close="-150"
+
+                       
+                       minimap_width="300"
+                       minimap_width_close="-300"
+                       minimap_height="200"
+                       
+                       thumbs_width="120"
+                       thumbs_height="80"
+                       thumbs_padding="10"
+                       thumbs_crop="0|40|240|160"
+                       design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+                       design_thumbborder_padding="2"
+                       design_thumbborder_bgroundedge="0" 
+                       
+                       design_menu_css="color:#FFFFFF; font-family:Arial; background-color:0x14475a; opacity:0; width:140px; height:620px;" 
+                       
+                       design_bg_css="margin:0px;color:#FFFFFF;font-family:Arial;background-color:0x14475a; opacity:0.8;"
+                       design_text_shadow="1" 
+                       
+                       design_setting_css="margin:0px;color:#FFFFFF;font-family:Arial;font-size:16px;background-color:0x14475a; opacity:0.8; padding:8px;"
+                       
+                       design_setting_hover_css="margin:0px;color:#FFFFFF;font-family:Arial;font-size:16px;background-color:#F9A21A; opacity:0.8; padding:8px;"
+                       
+                        loadscene_flags="MERGE"
+	                   loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	                   loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	                   loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+                       start_content_height = "145"
+                       content_height = "40"
+                       content_width = "200"
+                       bg_color_default = "#F9A21A"
+                       bg_color_active = "0x14475a"
+                       design_bgalpha="0.8"
+                       />
+    <plugin name="logo" url="assets/logo.png" keep="true" visible="true" align="topleft" x="10" y="10" zorder="200"
+	        />
+
+    <layer name="bg_thumb" keep="true"  visible="false" zorder="200"
+               url="%SWFPATH%/plugins/textfield.swf"
+               align="righttop"
+               background="false"
+               css="calc:sidemenu_settings.design_menu_css"
+                    onloaded="set(x,get(sidemenu_settings.fly_width_close));
+                              set(y,get(sidemenu_settings.fly_height));"
+               textshadow="1">
+                    <layer name="fly_thumbs_container" 
+                               url="%SWFPATH%/plugins/textfield.swf" 
+                               css=" background-color:#F9A21A;color:#FFFFFF;   
+                                font-weight:regular; font-size:22px;padding:10px;" 
+                               parent="bg_thumb"
+                               type="container" 
+                               align="righttop" 
+                               width="100%" 
+                               height="100%" 
+                               visible="true">
+
+                     </layer>
+            </layer>
+     <layer name="bg_streetview_thumb" keep="true"  visible="false" zorder="200"
+               url="%SWFPATH%/plugins/textfield.swf"
+               align="righttop"
+               background="false"
+               css="calc:sidemenu_settings.design_menu_css"
+                    onloaded="set(x,get(sidemenu_settings.fly_width_close));
+                              set(y,get(sidemenu_settings.fly_height));"
+               textshadow="1">
+                    <layer name="streetview_thumbs_container" 
+                               url="%SWFPATH%/plugins/textfield.swf" 
+                               css=" background-color:#F9A21A;color:#FFFFFF;   
+                                font-weight:regular; font-size:22px;padding:10px;" 
+                               parent="bg_streetview_thumb"
+                               type="container" 
+                               align="righttop" 
+                               width="100%" 
+                               height="100%" 
+                               visible="true">
+
+                     </layer>
+            </layer>
+    
+     <layer name="bg_noithat_thumb" keep="true"  visible="false" zorder="200"
+               url="%SWFPATH%/plugins/textfield.swf"
+               align="righttop"
+               background="false"
+              css="calc:sidemenu_settings.design_menu_css"
+                    onloaded="set(x,get(sidemenu_settings.fly_width_close));
+                              set(y,get(sidemenu_settings.fly_height));"
+               textshadow="1">
+                    <layer name="noithat_thumbs_container" 
+                               url="%SWFPATH%/plugins/textfield.swf" 
+                               css=" background-color:#F9A21A;color:#FFFFFF;   
+                                font-weight:regular; font-size:22px;padding:10px;" 
+                               parent="bg_noithat_thumb"
+                               type="container" 
+                               align="righttop" 
+                               width="100%" 
+                               height="100%" 
+                               visible="true">
+
+                     </layer>
+            </layer>
+        
+               
+    
+    <layer name="tab_right_menu" keep="true" type="container" align="righttop"  x="0" y="0" height="0" zorder="200">
+
+        <layer name="tab_setting" keep="true" zorder="20"  type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" width="-280" x="0" y="0">
+            <layer name="btn_1_open" style="skin_base|skin_glow" url="assets/tab_setting.png" align="righttop" edge="center" y="30" zorder="30" onclick="open_tabmenu(menu_setting,get(sidemenu_settings.setting_width),get(sidemenu_settings.setting_width_close),btn_1_open,btn_1_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_1_close" style="skin_base|skin_glow" url="assets/tab_setting_active.png" visible="false" align="righttop" edge="center" y="30" zorder="40" onclick="close_tabmenu(menu_setting,get(sidemenu_settings.setting_width),get(sidemenu_settings.setting_width_close),btn_1_open,btn_1_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="menu_setting" align="rightbottom" url="%SWFPATH%/plugins/textfield.swf" parent="tab_setting" edge="rightcenter" x="0" zorder="0" y="-47" handcursor="false" onloaded="set(width,get(sidemenu_settings.setting_width));
+                             set(x,get(sidemenu_settings.setting_width_close));
+                             set(height,get(sidemenu_settings.setting_height));">
+
+                <layer name="camera" url="%SWFPATH%/plugins/textfield.swf" 
+                       css="calc:sidemenu_settings.design_setting_css"
+                       onover="set(backgroundcolor:#F9A21A);"
+                       align="righttop" edge="center" y="0" zorder="2" html="[p]Chụp ảnh[/p]"
+                       onloaded="set(x,get(sidemenu_settings.start_content_height));
+                                 set(width,get(sidemenu_settings.content_width));"
+                       />
+                <layer name="form" url="%SWFPATH%/plugins/textfield.swf" css="calc:sidemenu_settings.design_setting_css" align="righttop" edge="center" y="40" zorder="2" html="[p]Bật hotspot[/p]" onloaded="set(x,get(sidemenu_settings.start_content_height));
+                                 set(width,get(sidemenu_settings.content_width));" />
+                <layer name="open_hotspot" url="%SWFPATH%/plugins/textfield.swf" css="calc:sidemenu_settings.design_setting_css" align="righttop" edge="center" y="80" zorder="2" html="[p]Đóng góp ý kiến[/p]" onloaded="set(x,get(sidemenu_settings.start_content_height));
+                                 set(width,get(sidemenu_settings.content_width));"/>
+                <layer name="language" url="%SWFPATH%/plugins/textfield.swf" css="calc:sidemenu_settings.design_setting_css" align="righttop" edge="center" y="120" zorder="2" html="[p]Tiếng Việt[/p]" onloaded="set(x,get(sidemenu_settings.start_content_height));
+                                 set(width,get(sidemenu_settings.content_width));"/>
+
+            </layer>
+        </layer>
+        <layer name="tab_info" keep="true" zorder="20"  type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="130">
+
+            <layer name="btn_2_open" style="skin_base|skin_glow" url="assets/tab_info2.png" align="righttop" edge="center" y="82" zorder="20" onclick="popup_open(info_content,btn_2_open,btn_2_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_2_close" style="skin_base|skin_glow" url="assets/tab_info2_active.png" align="righttop" edge="center" y="82" zorder="20" visible="false" onclick="popup_close(info_content,btn_2_open,btn_2_close);" onloaded="set(x,get(sidemenu_settings.info_width));" />
+
+            <layer name="menu_info" align="rightbottom" url="gui_menu/btn_x.png" parent="tab_setting" edge="rightcenter" x="0" zorder="0" y="0" handcursor="false" onloaded="set(width,get(sidemenu_settings.info_width));
+                             set(x,get(sidemenu_settings.info_width_close));
+                             set(height,get(sidemenu_settings.setting_height));">
+
+                <layer name="info_text" style="skin_base|skin_glow" url="gui_menu/btn_x.png" align="righttop" parent="menu_setting" edge="center" x="100" y="20" zorder="2" />
+                <layer name="info_video" style="skin_base|skin_glow" url="gui_menu/btn_x.png" parent="menu_setting" align="righttop" edge="center" x="50" y="20" zorder="2" />
+
+            </layer>
+        </layer>
+        <layer name="tab_video" keep="true" zorder="20"  type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="">
+
+            <layer name="btn_3_open" style="skin_base|skin_glow" url="assets/tab_video2.png" align="righttop" edge="center" y="136" zorder="20" onclick="popup_open(video_content,btn_3_open,btn_3_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_3_close" style="skin_base|skin_glow" url="assets/tab_video2_active.png" align="righttop" edge="center" y="136" zorder="20" visible="false" onclick="popup_close(video_content,btn_3_open,btn_3_close);" onloaded="set(x,get(sidemenu_settings.info_width));" />
+
+        </layer>
+        <layer name="tab_flycam" devices="desktop" keep="true" zorder="20" type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="130">
+            <layer name="btn_4_open" style="skin_base|skin_glow" url="assets/tab_flycam.png" align="righttop" edge="center" y="234" onclick="open_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_4_close" style="skin_base|skin_glow" url="assets/tab_flycam_active.png" align="righttop" edge="center" y="234" visible="false" onclick="close_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);" onloaded="set(x,get(sidemenu_settings.info_width));" />
+                 
+        </layer>
+        <layer name="tab_streetview" devices="desktop" zorder="20" keep="true" type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="130">
+            <layer name="btn_5_open" style="skin_base|skin_glow" url="assets/tab_streetview.png" align="righttop" edge="center" y="390" zorder="20" onclick="open_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_5_close" style="skin_base|skin_glow" url="assets/tab_streetview_active.png" align="righttop" edge="center" y="390" zorder="20" visible="false" onclick="close_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);" onloaded="set(x,get(sidemenu_settings.info_width));" />
+            
+           
+        </layer>
+        <layer name="tab_interior" devices="desktop" zorder="20" keep="true" type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="130">
+            <layer name="btn_6_open" style="skin_base|skin_glow" url="assets/tab_noithat.png" align="righttop" edge="center" y="550" zorder="20" onclick="open_tabmenu(bg_noithat_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_6_open,btn_6_close);popup_open_noithat(content_view,btn_6_open,btn_6_close); " onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_6_close" style="skin_base|skin_glow" url="assets/tab_noithat_active.png" align="righttop" edge="center" y="550" zorder="20" visible="false" onclick="popup_close(content_view,btn_6_open,btn_6_close);  close_tabmenu_noithat(bg_noithat_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_6_open,btn_6_close,content_interior_view);"
+            onloaded="set(x,get(sidemenu_settings.info_width));" />
+            
+
+        </layer>
+        
+        <layer name="tab_flycam" devices="mobile|tablet" keep="true" zorder="20" type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="130">
+            <layer name="btn_4_open" style="skin_base|skin_glow" url="assets/tab_flycam_m.png" align="righttop" edge="center" y="190" onclick="open_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_4_close" style="skin_base|skin_glow" url="assets/tab_flycam_m_active.png" align="righttop" edge="center" y="190" visible="false" onclick="close_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);" onloaded="set(x,get(sidemenu_settings.info_width));" />
+                 
+        </layer>
+        <layer name="tab_streetview" devices="mobile|tablet" zorder="20" keep="true" type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="130">
+            <layer name="btn_5_open" style="skin_base|skin_glow" url="assets/tab_streetview_m.png" align="righttop" edge="center" y="244" zorder="20" onclick="open_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);" onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_5_close" style="skin_base|skin_glow" url="assets/tab_streetview_m_active.png" align="righttop" edge="center" y="244" zorder="20" visible="false" onclick="close_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);" onloaded="set(x,get(sidemenu_settings.info_width));" />
+            
+           
+        </layer>
+        <layer name="tab_interior" devices="mobile|tablet" zorder="20" keep="true" type="container" bgcolor="0x000000" bgalpha="0.0" align="righttop" x="0" y="0" width="528" height="130">
+            <layer name="btn_6_open" style="skin_base|skin_glow" url="assets/tab_noithat_m.png" align="righttop" edge="center" y="298" zorder="20" onclick="open_tabmenu(bg_noithat_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_6_open,btn_6_close);popup_open_noithat(content_view,btn_6_open,btn_6_close); " onloaded="set(x,get(sidemenu_settings.tabmenu_width));" />
+
+            <layer name="btn_6_close" style="skin_base|skin_glow" url="assets/tab_noithat_m_active.png" align="righttop" edge="center" y="298" zorder="20" visible="false" onclick="popup_close(content_view,btn_6_open,btn_6_close);  close_tabmenu_noithat(bg_noithat_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_6_open,btn_6_close,content_interior_view);"
+            onloaded="set(x,get(sidemenu_settings.info_width));" />
+            
+
+        </layer>
+        
+    </layer>
+
+    <action name="fly_addthumbs">
+<!--        showlog();-->
+
+        copy(thumbwidth, sidemenu_settings.thumbs_width);
+        copy(thumbheight, sidemenu_settings.thumbs_height);
+        copy(thumbpadding, sidemenu_settings.thumbs_padding);
+        copy(thumbcrop, sidemenu_settings.thumbs_crop);
+
+        calc(thumbxoffset, thumbheight + thumbpadding);
+        calc(thumbxcenter, thumbxoffset * 0.5);
+        calc(thumbbarwidth, thumbxoffset * scene.count + thumbpadding);
+        calc(thumbbarheight, thumbpadding + thumbheight + thumbpadding);
+
+        set(layer[fly_thumbs], width=get(thumbbarwidth), height=get(thumbbarheight) );
+        set(count,4);
+        for(set(i,0), i LT 4, inc(i),
+
+        calc(thumbname, 'fly_thumb_' + i);
+        addlayer(get(thumbname));
+
+        set(layer[get(thumbname)],
+        url=get(scene[get(i)].thumburl),
+        keep=true,
+        parent='fly_thumbs_container',
+        align='righttop',
+        crop=get(thumbcrop),
+        width=get(thumbwidth),
+        height=get(thumbheight),
+        y=calc(thumbpadding + i*thumbxoffset),
+        x=12,
+        linkedscene=get(scene[get(i)].name),
+        linkedscene_ht=get(scene[get(count)].name),
+        onclick='loadscene_check();copy(layer[skin_thumbborder].parent, name);'
+        );
+        
+        calc(count,count+1);
+        trace(layer[calc('fly_thumb_' + i)].name);
+        
+        calc(titlename, 'fly_title_' + i);
+        addlayer(get(titlename));
+        set(layer[get(titlename)],
+        url='%SWFPATH%/plugins/textfield.swf',
+        keep=true,
+        parent=calc('fly_thumb_' + i),
+        align='lefttbottom',
+        css=calc(sidemenu_settings.design_bg_css),
+        html=calc(get(scene[get(i)].title))
+        ;
+        );
+        
+                
+        );
+        
+
+    </action>
+    <action name="streetview_addthumbs">
+<!--        showlog();-->
+
+        copy(thumbwidth, sidemenu_settings.thumbs_width);
+        copy(thumbheight, sidemenu_settings.thumbs_height);
+        copy(thumbpadding, sidemenu_settings.thumbs_padding);
+        copy(thumbcrop, sidemenu_settings.thumbs_crop);
+
+        calc(thumbxoffset, thumbheight + thumbpadding);
+        calc(thumbxcenter, thumbxoffset * 0.5);
+        calc(thumbbarwidth, thumbxoffset * scene.count + thumbpadding);
+        calc(thumbbarheight, thumbpadding + thumbheight + thumbpadding);
+
+        set(layer[streetview_thumbs], width=get(thumbbarwidth), height=get(thumbbarheight) );
+        set(count,0);
+        for(set(i,8), i LT 15, inc(i),
+        calc(thumbname, 'streetview_thumb_' + i);
+        addlayer(get(thumbname));
+
+        set(layer[get(thumbname)],
+        url=get(scene[get(i)].thumburl),
+        keep=true,
+        parent='streetview_thumbs_container',
+        align='righttop',
+        crop=get(thumbcrop),
+        width=get(thumbwidth),
+        height=get(thumbheight),
+        y=calc(thumbpadding + count*thumbxoffset),
+        x=12,
+        linkedscene=get(scene[get(i)].name),
+        onclick='
+        skin_loadscene(get(linkedscene),get(sidemenu_settings.loadscene_blend));copy(layer[skin_thumbborder].parent, name);'
+        );
+        
+        calc(titlename, 'streetview_title_' + i);
+        addlayer(get(titlename));
+        set(layer[get(titlename)],
+        url='%SWFPATH%/plugins/textfield.swf',
+        keep=true,
+        parent=calc('streetview_thumb_' + i),
+        align='lefttbottom',
+        css=calc(sidemenu_settings.design_bg_css),
+        html=calc(get(scene[get(i)].title));
+        );
+        
+        calc(count,count+1);
+        trace(layer[skin_thumbborder].parent);
+        );
+
+    </action>
+    <action name="noithat_addthumbs">
+<!--        showlog();-->
+
+        copy(thumbwidth, sidemenu_settings.thumbs_width);
+        copy(thumbheight, sidemenu_settings.thumbs_height);
+        copy(thumbpadding, sidemenu_settings.thumbs_padding);
+        copy(thumbcrop, sidemenu_settings.thumbs_crop);
+
+        calc(thumbxoffset, thumbheight + thumbpadding);
+        calc(thumbxcenter, thumbxoffset * 0.5);
+        calc(thumbbarwidth, thumbxoffset * scene.count + thumbpadding);
+        calc(thumbbarheight, thumbpadding + thumbheight + thumbpadding);
+
+        set(layer[noithat_thumbs], width=get(thumbbarwidth), height=get(thumbbarheight) );
+        set(count,0);
+        for(set(i,1), i LT 5, inc(i),
+        calc(thumbname, 'noithat_thumb_' + i);
+        addlayer(get(thumbname));
+
+        set(layer[get(thumbname)],
+        url=calc('assets/room/r' + i + '.jpg'),
+        keep=true,
+        zorder='200',
+        parent='noithat_thumbs_container',
+        align='righttop',
+        crop=get(thumbcrop),
+        width=get(thumbwidth),
+        height=get(thumbheight),
+        y=calc(thumbpadding + count*thumbxoffset),
+        x=12,
+        onclick='check_click_thumb(name);copy(layer[skin_thumbborder].parent, name);'
+        );
+        
+        calc(titlename, 'noithat_title_' + i);
+        addlayer(get(titlename));
+        
+        set(layer[get(titlename)],
+        url='%SWFPATH%/plugins/textfield.swf',
+        keep=true,
+        parent=calc('noithat_thumb_' + i),
+        align='lefttbottom',
+        css=calc(sidemenu_settings.design_bg_css),
+        html=calc(get(text[calc('room' +i )].value1))
+        ;
+        );
+        
+        calc(count,count+1);
+        trace(layer[skin_thumbborder].parent);
+        );
+
+    </action>
+    <action name="check_click_thumb">
+        if(%1 == noithat_thumb_1,iframe_embed(content_interior_view,interior.html));
+        if(%1 == noithat_thumb_2,iframe_embed(content_interior_view,interior/2.html));
+        if(%1 == noithat_thumb_3,iframe_embed(content_interior_view,interior/3.html));
+        if(%1 == noithat_thumb_4,iframe_embed(content_interior_view,interior/4.html));
+        
+    </action>
+    
+    <action name="add_iframe" type="Javascript">
+        var iframe = document.createElement("iframe");
+        iframe.style.position = "absolute";
+        iframe.style.left = 0;
+        iframe.style.top = 0;
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = 0;
+        iframe.src = args[1];
+        caller.sprite.appendChild(iframe);
+    </action>
+    <action name="iframe_embed">
+<!--        showlog();-->
+        removelayer(%1);
+        addlayer(%1);
+        set(layer[%1].align, center);
+        set(layer[%1].width, 100%);
+        set(layer[%1].height, 100%);
+        set(layer[%1].y, 0%);
+        set(layer[%1].zorder, 0);
+
+        txtadd(iframecode,'[iframe id="krpano_iframe_',%1,'" width="100%" height="100%" position="absolute" src="',%2,'"][/iframe]');
+        copy(layer[%1].html, iframecode);
+        set(layer[%1].padding, 0);
+        set(layer[%1].url, '%SWFPATH%/plugins/textfield.swf');
+        set(layer[%1].interactivecontent, true);
+        set(layer[%1].onloaded, iframe_resize(%1); );
+
+        trace(iframecode);
+
+    </action>
+    <action name="iframe_resize" type="Javascript" devices="html5">
+    <![CDATA[
+    document.querySelector("#krpano_iframe_"+args[1]).parentNode.style.height="100%";
+    ]]>
+    </action>
+    
+        <action name="popup_open">
+        close_tabmenu(menu_setting,get(sidemenu_settings.setting_width),get(sidemenu_settings.setting_width_close),btn_1_open,btn_1_close);
+        popup_close(info_content,btn_2_open,btn_2_close);
+        popup_close(video_content,btn_3_open,btn_3_close);
+        popup_close(content_view,btn_6_open,btn_6_close);
+       close_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);
+       close_tabmenu(bg_noithat_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);
+       close_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);
+       popup_close(content_interior_view,btn_6_open,btn_6_close);
+       
+        set(layer[%1].visible, true);
+        set(layer[%2].visible,false);
+        set(layer[%3].visible,true);
+    </action>
+    <action name="popup_open_noithat">
+        close_tabmenu(menu_setting,get(sidemenu_settings.setting_width),get(sidemenu_settings.setting_width_close),btn_1_open,btn_1_close);
+        popup_close(info_content,btn_2_open,btn_2_close);
+        popup_close(video_content,btn_3_open,btn_3_close);
+        popup_close(content_view,btn_6_open,btn_6_close);
+        
+        popup_close(content_interior_view_1,btn_6_open,btn_6_close);
+        popup_close(content_interior_view_2,btn_6_open,btn_6_close);
+        popup_close(content_interior_view_3,btn_6_open,btn_6_close);
+        popup_close(content_interior_view_4,btn_6_open,btn_6_close);
+       close_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);
+       close_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);
+       popup_close(content_interior_view,btn_6_open,btn_6_close);
+       
+        set(layer[%1].visible, true);
+        set(layer[%2].visible,false);
+        set(layer[%3].visible,true);
+    </action>
+    
+    <action name="popup_close">
+
+        set(layer[%1].visible, false);
+        set(layer[%2].visible,true);
+        set(layer[%3].visible,false);
+    </action>
+       
+       
+        <!--  Anton code START  -->
+    <action name="activatespot">
+        set(layer[radar].visible, false); set(layer[radar2].visible, false); set(layer[activespot2].visible, false); copy(layer[radar].x, layer[%1].x); copy(layer[radar].y, layer[%1].y); copy(layer[activespot].x, layer[%1].x); copy(layer[activespot].y, layer[%1].y); set(layer[radar].heading, %2); set(layer[radar].visible, true); set(layer[activespot].visible, true); if(map_status=='open', openfirstfloor();); set(active_flor,1);
+    </action>
+    <action name="activatespot2">
+        set(layer[radar].visible, false); set(layer[radar2].visible, false); set(layer[activespot].visible, false); copy(layer[radar2].x, layer[%1].x); copy(layer[radar2].y, layer[%1].y); copy(layer[activespot2].x, layer[%1].x); copy(layer[activespot2].y, layer[%1].y); set(layer[radar2].heading, %2); set(layer[radar2].visible, true); set(layer[activespot2].visible, true); if(map_status=='open',opensecondfloor();); set(active_flor,2);
+    </action>
+    <!--  close first floor plan  -->
+    <action name="closefirstfloor">
+         tween(layer[first-floor].x,-705,1,easeOutQuint); set(layer[first-floor-close].visible,false); set(layer[first-floor-open].visible,true); set(map_status,closed);
+    </action>
+    <!--  open first floor plan  -->
+    <action name="openfirstfloor">
+       set(layer[first-floor].align, righttop); tween(layer[first-floor].x,0,1,easeOutQuint); set(layer[first-floor-open].visible,false); set(layer[first-floor-close].visible,true); closesecondfloor(); set(layer[second-floor].zorder,20); set(layer[first-floor].zorder,0); set(map_status,open);
+    </action>
+    <!--  close second floor plan  -->
+    <action name="closesecondfloor">
+        
+        tween(layer[map2].x,get(sidemenu_settings.minimap_width_close),1,easeOutQuint); set(layer[second-floor-close].visible,false);
+        set(layer[second-floor-open].visible,true);
+        set(map_status,closed);
+    </action>
+    <!--  open second floor plan  -->
+    <action name="opensecondfloor">
+       
+        set(layer[second-floor-open].visible,false);
+        set(layer[second-floor-close].visible,true);
+        closefirstfloor(); set(layer[second-floor].zorder,0); set(layer[first-floor].zorder,20); set(map_status,open);
+    </action>
+    <action name="open_tabmenu">
+      close_tabmenu(menu_setting,get(sidemenu_settings.setting_width),get(sidemenu_settings.setting_width_close),btn_1_open,btn_1_close);
+        popup_close(info_content,btn_2_open,btn_2_close);
+        popup_close(video_content,btn_3_open,btn_3_close);
+        popup_close(content_view);
+        popup_close(content_interior_view_1,btn_6_open,btn_6_close);
+        popup_close(content_interior_view_2,btn_6_open,btn_6_close);
+        popup_close(content_interior_view_3,btn_6_open,btn_6_close);
+        popup_close(content_interior_view_4,btn_6_open,btn_6_close);
+       close_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);
+       close_tabmenu(bg_noithat_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);
+       close_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);
+       popup_close(content_interior_view,btn_6_open,btn_6_close);
+       
+        tween(layer[%1].x,%2,1,easeOutQuint);
+        set(layer[%1].visible,true);
+        set(layer[%4].visible,false);
+        set(layer[%5].visible,true);
+        
+        if(%1 == 'bg_thumb',loadscene(scene_P1_400,MERGE,BLEND(1));copy(layer[skin_thumbborder].parent, layer[fly_thumb_0].name));
+        if(%1 == 'bg_streetview_thumb',loadscene(scene_VHSC_Pano_06_Tienich,MERGE,BLEND(1));copy(layer[skin_thumbborder].parent, layer[streetview_thumb_8].name));
+        
+<!--
+        showlog();
+        trace(layer[fly_thumb_0].name);
+-->
+
+    </action>
+    <action name="close_tabmenu">
+        tween(layer[%1].x,%3,1,easeOutQuint);
+        set(layer[%4].visible,true);
+        set(layer[%5].visible,false);
+    </action>
+    <action name="close_tabmenu_noithat">
+        tween(layer[%1].x,%3,1,easeOutQuint);
+        set(layer[%4].visible,true);
+        set(layer[%5].visible,false);
+        set(layer[%6].visible,false);
+    </action>
+    <action name="reset_tab">
+        close_tabmenu(menu_setting,get(sidemenu_settings.setting_width),get(sidemenu_settings.setting_width_close),btn_1_open,btn_1_close);
+        popup_close(info_content,btn_2_open,btn_2_close);
+        popup_close(video_content,btn_3_open,btn_3_close);
+        popup_close(content_view);
+       close_tabmenu(bg_streetview_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);
+       close_tabmenu(bg_noithat_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_5_open,btn_5_close);
+       close_tabmenu(bg_thumb,get(sidemenu_settings.fly_width),get(sidemenu_settings.fly_width_close),btn_4_open,btn_4_close);
+       popup_close(content_interior_view,btn_6_open,btn_6_close);
+    </action>
+    <action name="loadscene_check">
+        if(layer[btn_3d].visible == true,
+        loadscene(get(linkedscene),MERGE,BLEND(1)); trace(linkedscene), loadscene(get(linkedscene_ht),MERGE,BLEND(1)); trace(linkedscene_ht) ) ;
+        lookat(get(view.hlookat),get(view.vlookat));
+        trace(view.hlookat);
+    </action>
+    <events name="loadscreen" keep="true" onresize="resize_screen();" />
+    <action name="resize_screen">
+        calc(layer[info_content].height, stageheight*0.8);
+        calc(layer[info_content].width,  stagewidth*0.8);
+        
+        calc(layer[content_view].height, stageheight*1);
+        calc(layer[content_view].width,  stagewidth*1);
+        
+        calc(layer[video_content].height, stageheight);
+        calc(layer[video_content].width,  stagewidth);
+    </action>
+</krpano>

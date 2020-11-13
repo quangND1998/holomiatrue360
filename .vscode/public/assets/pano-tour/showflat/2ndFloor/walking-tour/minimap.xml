@@ -1,0 +1,78 @@
+<krpano>
+    <include url="plugins/minimap.xml"/>
+    <layer name="tab_minimap" zorder="20" keep="true" type="container" bgcolor="0x000000" bgalpha="0.0" align="topleft"  css="calc:sidemenu_settings.minimap_css">
+            <layer
+                name="map2"
+                url="gui_menu/minimap_T2.png"
+                align="left" parent="tab_minimap"
+                edge="rightcenter" zorder="0"
+                handcursor="false"
+                css="calc:sidemenu_settings.minimap_css"
+                onloaded="
+                            set(x,get(sidemenu_settings.minimap_x_open));
+                            set(y,get(sidemenu_settings.minimap_y_open));
+                            set(width,get(sidemenu_settings.minimap_width));
+                            set(height,get(sidemenu_settings.minimap_height));
+                            set(scale,get(sidemenu_settings.scale_minimap));
+                        "
+            >
+
+                <layer name="radarmask2" type="container" align="righttop" width="100%" height="100%" maskchildren="true">
+                    <layer
+                        name="radar2"
+                        visible="true"
+                        parent="map2"
+                        url="plugins/radar.swf"
+                        alturl="plugins/radar.js"
+                        align="center"
+                        edge="center"
+                        zorder="1"
+                        scale="0.4"
+                        fillcolor="0x000000"
+                        fillalpha="0.3"
+                        linecolor="0xFF0000"
+                        linewidth="0"
+                        linealpha="0"
+                        headingoffset="0"
+                    />
+
+                    <layer name="pin0" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="-10" y="-20" zorder="2" onclick="activatespot2(pin0,91.8); add_spin(scene0,everpano3d_0);" />
+
+                    <layer name="pin1" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="-10" y="10" visible="true" zorder="2" onclick="activatespot2(pin1,0); add_spin(scene1,everpano3d_1);" />
+
+                    <layer name="pin2" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="20" y="10" visible="true" zorder="2" onclick="activatespot2(pin2,0); add_spin(scene9,everpano3d_9);" />
+
+                     <layer name="pin3" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="0" y="25" visible="true" zorder="2" onclick="activatespot2(pin4,0); add_spin(scene2,everpano3d_2);" />
+
+                    <layer name="pin4" url="gui_menu/mappoint.png" parent="map2" align="center" edge="center" x="0" y="50" visible="true" zorder="2" onclick="activatespot2(pin5,0); add_spin(scene3,everpano3d_3);" />
+
+                     <layer name="pin5" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="20"  y="65" zorder="2" onclick="activatespot2(pin5,91.8); add_spin(scene4,everpano3d_4);" />
+
+                     <layer name="pin6" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="20" y="95" visible="true" zorder="2" onclick="activatespot2(pin7,0); add_spin(scene5,everpano3d_5);" />
+
+                    <layer name="pin7" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="-35" y="10" visible="true" zorder="2" onclick="activatespot2(pin8,0); add_spin(scene6,everpano3d_6);" />
+
+                   <layer name="pin8" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="-35" y="45" visible="true" zorder="2" onclick="activatespot2(pin9,0); add_spin(scene7,everpano3d_7);" />
+
+                    <layer name="pin9" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="-35" y="70" visible="true" zorder="2" onclick="activatespot2(pin9,0); add_spin(scene8,everpano3d_8);" />
+
+                    <layer name="pin10" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="10" y="-30" visible="true" zorder="2" onclick="activatespot2(pin10,0); add_spin(scene10,everpano3d_10);" />
+
+                    <layer name="pin11" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="40" y="-30" visible="true" zorder="2" onclick="activatespot2(pin11,0); add_spin(scene11,everpano3d_11);" />
+
+                    <layer name="pin12" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="-10" y="-45" visible="true" zorder="2" onclick="activatespot2(pin12,0); add_spin(scene12,everpano3d_12);" />
+
+                    <layer name="pin13" url="gui_menu/mappoint.png" parent="map2" align="center" edge="center" x="-10" y="-75" visible="true" zorder="2" onclick="activatespot2(pin13,0); add_spin(scene13,everpano3d_13);" />
+
+                    <layer name="pin14" url="gui_menu/mappoint.png" parent="map2" align="center" edge="center" x="10" y="-90" visible="true" zorder="2" onclick="activatespot2(pin14,0); add_spin(scene14,everpano3d_14);" />
+
+                    <layer name="pin15" url="gui_menu/mappoint.png" align="center" parent="map2" edge="center" x="10" y="-110" zorder="2" onclick="activatespot2(pin15,0); add_spin(scene15,everpano3d_15);" />
+
+                </layer>
+            </layer>
+
+            <layer name="btn_7_close" url="gui_menu/minimap.png" align="topleft" edge="topleft" zorder="20" visible="true" onclick="close_tabmenu(map2,get(sidemenu_settings.minimap_x_open),get(sidemenu_settings.minimap_height_close),btn_7_open,btn_7_close);" onloaded="set(y,get(sidemenu_settings.tab_minimap_y)); set(x,get(sidemenu_settings.tab_minimap_x));" />
+
+            <layer name="btn_7_open"  url="gui_menu/minimap.png" visible="false"  align="topleft" edge="topleft"  zorder="20" onclick="open_tabmenu(map2,get(sidemenu_settings.minimap_x_open),get(sidemenu_settings.minimap_height_close),btn_7_open,btn_7_close); close_tabmenu(info_canho,get(sidemenu_settings.info_x),get(sidemenu_settings.info_x_close),btn_info_open,btn_info_close);" onloaded="set(y,get(sidemenu_settings.tab_minimap_y)); set(x,get(sidemenu_settings.tab_minimap_x));" />
+        </layer>
+</krpano>

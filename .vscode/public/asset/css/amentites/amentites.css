@@ -1,0 +1,29 @@
+.amentites__item:hover img {
+    opacity: .6;
+    transform: scale(1.2);
+}
+
+.amentites__item a {
+    color: #f2f2f2;
+}
+
+.amentites__item a:hover {
+    text-decoration: none;
+}
+
+.amentites__info {
+    position: relative;
+    overflow: hidden;
+}
+
+.amentites__info img {
+    transition: ease-in-out .5s;
+}
+
+.amentites__info .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #00000066;
+    color: #f2f2f2;
+}
